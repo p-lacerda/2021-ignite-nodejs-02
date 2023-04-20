@@ -10,9 +10,7 @@ app.use(express.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
-app.get('/', (request, response) => {
-  return response.json({ message: 'Hello World' });
-});
+app.use(router);
 
 app.listen(3333, () => {
   // eslint-disable-next-line no-console
